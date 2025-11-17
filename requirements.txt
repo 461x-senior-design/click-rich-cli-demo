@@ -1,0 +1,5 @@
+# CLI Framework
+click>=8.1.0
+
+# Terminal Formatting and Progress Bars
+rich>=13.0.0

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stem-demo"
+version = "0.1.0"
+description = "A demo CLI tool for audio stem separation with beautiful terminal output"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+dependencies = [
+    "click>=8.1.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+stem-demo = "stem_demo.cli.main:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["stem_demo*"]
