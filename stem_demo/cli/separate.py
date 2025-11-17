@@ -118,10 +118,15 @@ def separate(audio_file: str, output_dir: str, verbose: bool) -> None:
         duration = result["duration"]
         stems = result["stems"]
 
-        # Create success panel
+        # Create success panel with generated stem filenames
+        stem_lines = "\n".join(
+            f"[white]- [cyan]{Path(stem).name}[/cyan]"
+            for stem in stems
+        )
         success_message = (
             f"[green]Successfully separated audio into {len(stems)} stems[/green]\n"
-            f"[dim]Processing time: {duration:.2f} seconds[/dim]"
+            f"[dim]Processing time: {duration:.2f} seconds[/dim]\n\n"
+            f"[bold]Generated files:[/bold]\n{stem_lines}"
         )
 
         print_panel(
@@ -130,12 +135,11 @@ def separate(audio_file: str, output_dir: str, verbose: bool) -> None:
             style="green",
         )
 
-        # Show generated stems if verbose
+        # Show generated stems if verbose (with full paths)
         if verbose:
-            console.print("\n[bold]Generated stems:[/bold]")
+            console.print("\n[bold]Generated stems (full paths):[/bold]")
             for i, stem in enumerate(stems, 1):
-                stem_name = Path(stem).name
-                console.print(f"  {i}. [cyan]{stem_name}[/cyan]")
+                console.print(f"  {i}. [cyan]{stem}[/cyan]")
             console.print()
 
     except KeyboardInterrupt:
