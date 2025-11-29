@@ -1,6 +1,6 @@
 # stem-demo: Audio Stem Separation CLI Tool
 
-A beautiful demo CLI application showcasing how to build professional command-line tools using **Click** and **Rich** in Python.
+A quick demo CLI application showcasing how to build sleek command-line tools using **Click** and **Rich** in Python.
 
 ## Overview
 
@@ -13,12 +13,12 @@ This project demonstrates best practices for building modern CLI applications wi
 
 ## Features
 
-- 🎵 Audio file stem separation (simulated for demo)
-- 🎨 Beautiful terminal output with colors and formatting
-- 📊 Real-time progress bars with time estimates
-- ✅ Comprehensive error handling and validation
-- 📝 Rich help text and documentation
-- 🔧 Modular, maintainable code structure
+- Audio file stem separation (simulated for demo)
+- Beautiful terminal output with colors and formatting
+- Real-time progress bars with time estimates
+- Comprehensive error handling and validation
+- Rich help text and documentation
+- Modular, maintainable code structure
 
 ## Installation
 
